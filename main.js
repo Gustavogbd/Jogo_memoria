@@ -30,7 +30,7 @@ let lightColor = (element, number) => {
     }, number - 250);
     setTimeout(() => {
         element.classList.remove('selected');
-    });
+    },250);
 }
 
 let checkOrder = () => {
@@ -41,7 +41,7 @@ let checkOrder = () => {
         }
     }
     if(clickedOrder.length == order.length) {
-        alert('Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!');
+        alert('Pontuação: ' + score + '\nVocê acertou! Iniciando próximo nível!');
         nextlevel();
 
     }
@@ -76,7 +76,7 @@ let nextlevel = () => {
 }
 
 let lose = () => {
-    alert('Pontuação: ${score}\nVocê perdeu!\nClique em ok para iniciar um novo jogo.');
+    alert('Pontuação: ' + score + '\nVocê perdeu!\nClique em ok para iniciar um novo jogo.');
     order = [];
     clickedOrder = [];
 
