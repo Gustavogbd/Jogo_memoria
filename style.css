@@ -42,3 +42,6 @@ body {
 .selected {
     opacity: 0.4;
 }
+.genius div:hover {
+    cursor: pointer;
+}

@@ -24,13 +24,13 @@ let shuffleOrder = () => {
 }
 
 let lightColor = (element, number) => {
-    number = number * 500;
+    number = number * 1000;
     setTimeout(() => {
-        element.classList.add('selected');
-    }, number - 250);
+    element.classList.add('selected');
+    }, number - 500);
     setTimeout(() => {
         element.classList.remove('selected');
-    },250);
+    },1000);
 }
 
 let checkOrder = () => {
@@ -48,14 +48,13 @@ let checkOrder = () => {
 }
 
 let click = (color) => {
+    
     clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
-
     setTimeout(() => {
-       createColorElement(color).classList.remove('selected');
-       checkOrder();
+        createColorElement(color).classList.remove('selected'); 
     }, 250);
-
+    checkOrder();
 }
 
 let createColorElement = (color) => {
@@ -84,7 +83,7 @@ let lose = () => {
 }
 
 let playGame = () => {
-    alert('Bem vindo ao Gênesis! Iniciando novo jogo');
+    alert('Bem vindo ao Gênesis!\nIniciando novo jogo');
     score = 0;
 
     nextlevel();
